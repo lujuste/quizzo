@@ -8,14 +8,18 @@ import {
 type Props = {
   label: string;
   variant?: Variants;
+  isSmall?: boolean;
 } & TouchableOpacityProps;
 
 export const Button = ({
   label,
   variant = "primary",
   disabled = false,
+  isSmall = false,
   ...rest
 }: Props) => {
+  const classNames = isSmall ? "h-8" : "h-14";
+
   return (
     <TouchableOpacity
       disabled={disabled}
@@ -23,11 +27,15 @@ export const Button = ({
       style={{
         opacity: disabled ? 0.2 : 1,
       }}
-      className={`w-full h-16 ${colorsScheme[variant]} rounded-[22] flex items-center justify-center `}
+      className={`w-full ${classNames} ${colorsScheme[variant]} rounded-[22] flex items-center justify-center`}
     >
       <Text
-        className="text-white font-notosansbold font-bold
-"
+        style={{
+          fontSize: isSmall ? 12 : 16,
+        }}
+        className={`${
+          isSmall ? "font-notosans" : "font-notosansbold"
+        } text-white font-bold`}
       >
         {label}
       </Text>

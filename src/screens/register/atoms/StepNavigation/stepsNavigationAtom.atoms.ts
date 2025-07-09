@@ -12,7 +12,7 @@ export interface NavigationState {
 }
 
 export const navigationHistoryAtom = atom<NavigationState[]>([
-  { page: PagesEnum.OCUPATION },
+  { page: PagesEnum.CREDENTIALS },
 ]);
 
 export const buttonStep = atom(false);

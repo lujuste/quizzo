@@ -22,7 +22,7 @@ export const ProgressBar = ({ step, steps }: Props) => {
   }, [step, steps]);
 
   return (
-    <View className="mb-6 h-2 w-52 bg-zinc-400 rounded-xl ">
+    <View className="mb-6 h-2 w-52 bg-zinc-800 rounded-xl ">
       <Animated.View
         className={`h-2 rounded-xl ${colorsScheme.primary}`}
         style={{
