@@ -1,14 +1,13 @@
+import { currentOption } from "@/atoms/currentOptionAtom.atoms";
+import { Back } from "@/components/Back";
+import { ModalBottomSheet } from "@/components/ModalBottomSheet";
 import { ProgressBar } from "@/components/ProgressBar";
+import { colorsScheme } from "@/constants/colors";
+import { useNavigation } from "@/hooks/useNavigation";
+import { useAtom } from "jotai";
+import { type PropsWithChildren } from "react";
 import { View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { colorsScheme } from "@/constants/colors";
-import { Back } from "@/components/Back";
-import { Footer } from "@/screens/onboarding/components/Footer";
-import { Button } from "@/components/Button";
-import type { PropsWithChildren } from "react";
-import { currentOption } from "@/atoms/Cards/currentOptionAtom.atoms";
-import { useAtom } from "jotai";
-import { useNavigation } from "@/screens/hooks/useNavigation";
 
 type Props = {
   handleBack: VoidFunction;
@@ -23,35 +22,31 @@ export const StepsLayout = ({
   children,
 }: Props) => {
   const [, setCurrentOption] = useAtom(currentOption);
-  const { actions, currenNumberPage } = useNavigation();
+  const { currenNumberPage } = useNavigation();
 
   return (
     <SafeAreaView className={`flex-1 ${colorsScheme.bg}`}>
-      <View className="flex-row py-4 px-6 items-center justify-center">
-        <Back
-          onPress={() => {
-            setCurrentOption(null);
-            handleBack();
-          }}
-        />
-        <View className="flex-1 items-center justify-center mt-5">
-          <ProgressBar
-            steps={5}
-            step={currenNumberPage}
-            porcentage={progress}
+      <View className="flex-1 relative">
+        <View className="flex-row py-4 px-6 items-center justify-center">
+          <Back
+            onPress={() => {
+              setCurrentOption(null);
+              handleBack();
+            }}
           />
+          <View className="flex-1 items-center justify-center mt-5">
+            <ProgressBar
+              steps={5}
+              step={currenNumberPage}
+              porcentage={progress}
+            />
+          </View>
         </View>
+
+        {children}
       </View>
 
-      {children}
-
-      <Footer maxHeight={100}>
-        <Button
-          disabled={actions.disabledButton}
-          onPress={handleGo}
-          label="GET STARTED"
-        />
-      </Footer>
+      <ModalBottomSheet />
     </SafeAreaView>
   );
 };

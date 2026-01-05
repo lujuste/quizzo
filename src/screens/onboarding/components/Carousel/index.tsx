@@ -51,7 +51,7 @@ export const Carousel = () => {
         }}
         onViewableItemsChanged={onViewableItemsChanged}
       />
-      <View className="absolute bottom-20 left-0 right-0 mx-5  z-10  h-14">
+      <View className="absolute bottom-20 left-0 right-0 mx-5  z-10 h-14">
         <Pagination
           data={slides}
           axisX={axisX}

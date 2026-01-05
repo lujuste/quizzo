@@ -17,7 +17,7 @@ export const Pagination = ({
   flatListRef,
 }: Props) => {
   return (
-    <View className="flex-row h-40 justify-center items-center gap-2.5">
+    <View className="flex-row h-40 justify-center items-center gap-2.5 mt-4">
       {data.map((onboarding, index) => (
         <Dot
           key={onboarding.id}

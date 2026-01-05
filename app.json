@@ -12,6 +12,10 @@
         "expo-router",
         {
           "origin": "https://n"
+        },
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.379725403380-5lopqnh3ma5aomse9qik09402075rvdn"
         }
       ],
       "expo-font"

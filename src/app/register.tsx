@@ -1,11 +1,18 @@
-import { useRouter } from "expo-router";
-import { StepsLayout } from "@/screens/register/ui/StepsLayout";
-import { Ocupation } from "@/screens/register/ui/Ocupation";
-import { useNavigation } from "@/screens/hooks/useNavigation";
+import { useNavigation } from "@/hooks/useNavigation";
 import { PagesEnum } from "@/screens/register/atoms/StepNavigation/stepsNavigationAtom.atoms";
-import { Workspace } from "@/screens/register/ui/Workspace";
 import { Credentials } from "@/screens/register/ui/Credentials";
 import { FinishRegister } from "@/screens/register/ui/FinishRegister";
+import { Ocupation } from "@/screens/register/ui/Ocupation";
+import { StepsLayout } from "@/screens/register/ui/StepsLayout";
+import { Workspace } from "@/screens/register/ui/Workspace";
+import { useRouter } from "expo-router";
+
+const pages = {
+  ocupation: Ocupation,
+  workspace: Workspace,
+  credentials: Credentials,
+  finishRegister: FinishRegister,
+};
 
 export default function RegisterScreen() {
   const router = useRouter();
@@ -14,13 +21,6 @@ export default function RegisterScreen() {
   const handleBackPage = () => {
     if (currentPage === PagesEnum.OCUPATION) return router.back();
     navigate.back();
-  };
-
-  const pages = {
-    ocupation: Ocupation,
-    workspace: Workspace,
-    credentials: Credentials,
-    finishRegister: FinishRegister,
   };
 
   const handleNextPage = () => {

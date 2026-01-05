@@ -7,7 +7,6 @@ let nativeWindConfig = withNativeWind(config, {
   input: "./src/global.css",
 });
 
-// Agora aplica as alterações para SVG transformer
 nativeWindConfig.transformer.babelTransformerPath = require.resolve(
   "react-native-svg-transformer"
 );

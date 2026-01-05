@@ -5,7 +5,11 @@ type FormProps = {
   workspace: string;
 };
 
+export type CredentialFormFields = "country" | "dateBirthday";
+
 export const stepFormAtom = atom<FormProps>({
   ocupation: "",
   workspace: "",
 });
+
+export const CredentialForm = atom<CredentialFormFields>("dateBirthday");

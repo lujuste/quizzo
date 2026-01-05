@@ -4,5 +4,5 @@ import type { SvgProps } from "react-native-svg";
 export type SlideCarousel = {
   id: string;
   title: string;
-  image: FC<SvgProps>;
+  image: FC<SvgProps> | string;
 };

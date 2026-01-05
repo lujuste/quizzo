@@ -28,7 +28,7 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>acme</string>
-          <string>com.anonymous.quizzo</string>
+          <string>com.lucasjuste.quizzo</string>
         </array>
       </dict>
     </array>

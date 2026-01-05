@@ -1,10 +1,10 @@
-import { useAtom } from "jotai";
 import {
   buttonStep,
   navigationHistoryAtom,
   type NavigationState,
   type PagesEnum,
-} from "../register/atoms/StepNavigation/stepsNavigationAtom.atoms";
+} from "@/screens/register/atoms/StepNavigation/stepsNavigationAtom.atoms";
+import { useAtom } from "jotai";
 
 const totalPages = 4;
 

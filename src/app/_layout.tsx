@@ -1,12 +1,28 @@
 import "@/global.css";
+import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { useFonts } from "expo-font";
-import { Provider } from "jotai";
-import { createStore } from "jotai";
-import { DevTools } from "jotai-devtools";
-import "jotai-devtools/styles.css";
+import { createStore, Provider } from "jotai";
+import { ActivityIndicator, View } from "react-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
+import { LogBox } from "react-native";
+
+// Ignora todos os warnings visuais
+LogBox.ignoreAllLogs(true);
+
+// Override global do console.warn
+const originalWarn = console.warn;
+console.warn = (...args: any[]) => {
+  const message = args[0] + "";
+  if (
+    message.includes("Tried to modify key `current` of an object") ||
+    message.includes("Require cycle:")
+  ) {
+    return; // ignora
+  }
+  originalWarn(...args); // mantém outros warnings
+};
 const customStore = createStore();
 
 export default function RootLayout() {
@@ -16,35 +32,41 @@ export default function RootLayout() {
   });
 
   if (!fontsLoaded) {
-    return null; // Ou um loading
+    return (
+      <View className="flex-1  bg-zinc-950">
+        <ActivityIndicator size="large" color="#fff" className="flex-1" />
+      </View>
+    );
   }
 
   return (
     <Provider store={customStore}>
-      <StatusBar style="light" />
-      <Stack>
-        <Stack.Screen
-          name="(protected)"
-          options={{
-            headerShown: false,
-          }}
-        />
-        <Stack.Screen name="login" />
+      <GestureHandlerRootView>
+        <StatusBar style="light" />
+        <Stack>
+          <Stack.Screen
+            name="(protected)"
+            options={{
+              headerShown: false,
+            }}
+          />
+          <Stack.Screen name="login" />
 
-        <Stack.Screen
-          name="onboarding"
-          options={{
-            headerShown: false,
-          }}
-        />
+          <Stack.Screen
+            name="onboarding"
+            options={{
+              headerShown: false,
+            }}
+          />
 
-        <Stack.Screen
-          name="register"
-          options={{
-            headerShown: false,
-          }}
-        />
-      </Stack>
+          <Stack.Screen
+            name="register"
+            options={{
+              headerShown: false,
+            }}
+          />
+        </Stack>
+      </GestureHandlerRootView>
     </Provider>
   );
 }

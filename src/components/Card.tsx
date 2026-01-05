@@ -1,15 +1,9 @@
-import { Text, TouchableOpacity, View } from "react-native";
 import Octicons from "@expo/vector-icons/Octicons";
 import { LinearGradient } from "expo-linear-gradient";
-import { prospectUser } from "@/screens/register/constants/onBoardingRegister.constants";
-import { atom, useAtom, useSetAtom } from "jotai";
-import { currentOption } from "@/atoms/Cards/currentOptionAtom.atoms";
-import { useForm } from "@/screens/hooks/useForm";
-
-type Occupation = (typeof prospectUser.occupation)[number];
+import { Text, TouchableOpacity, View } from "react-native";
 
 type Props = {
-  label: Occupation;
+  label: string;
   index: number;
   onSelect(selectedItem: string): void;
   isActive: boolean;
@@ -21,7 +15,7 @@ type OccupationColor = {
   gradient: [string, string];
 };
 
-const color: Record<Occupation, OccupationColor> = {
+const color: Record<number, OccupationColor> = {
   0: {
     color: "bg-indigo-600",
     icon: "people",

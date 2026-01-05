@@ -1,39 +1,72 @@
-import { ScrollView, Text, View } from "react-native";
-import { prospectUser } from "../constants/onBoardingRegister.constants";
 import { Card } from "@/components/Card";
-import { useForm } from "@/screens/hooks/useForm";
-import { useNavigation } from "@/screens/hooks/useNavigation";
+
+import { Button } from "@/components/Button";
+import { useStepForm } from "@/hooks/useForm";
+import { useNavigation } from "@/hooks/useNavigation";
+import { useRegister } from "@/hooks/useRegister.hooks";
+import { Footer } from "@/screens/onboarding/components/Footer";
+import { Fragment, useEffect } from "react";
+import { ScrollView, Text, View } from "react-native";
+import { PagesEnum } from "../atoms/StepNavigation/stepsNavigationAtom.atoms";
+import { prospectUser } from "../constants/onBoardingRegister.constants";
+import { workspaceStepSchema } from "../form/registerSchema.form";
+import { SkippedRegister } from "../components/SkippedRegister";
 
 export const Workspace = () => {
-  const { form, events } = useForm();
-  const { actions } = useNavigation();
+  const { navigate } = useNavigation();
+  const { handleUpdateProspect, prospect } = useRegister();
+
+  const {
+    value: workspace,
+    handleSelect: handleSelectWorkspace,
+    formState: { isValid },
+    setValue,
+  } = useStepForm({
+    schema: workspaceStepSchema,
+    field: "workspace",
+  });
+
+  useEffect(() => {
+    if (!prospect.workspace) return;
+    setValue("workspace", prospect.workspace);
+  }, [prospect.workspace]);
 
   return (
-    <View className="flex-1 gap-[16] px-6">
-      <Text className="text-3xl mt-2 text-center font-bold text-white font-notosansbold leading-[1.8]">
-        Describe a workspace that suits you
-      </Text>
+    <Fragment>
+      <View className="flex-1 gap-[16] px-6">
+        <Text className="text-3xl mt-2 text-center font-bold text-white font-notosansbold leading-[1.8]">
+          Describe a workspace that suits you
+        </Text>
 
-      <Text className="text-md text-center font-bold text-white font-notosans leading-[1.8]">
-        You can skip it if you're not sure.
-      </Text>
+        <SkippedRegister text="You can skip it if youre not sure, tap here." />
 
-      <ScrollView className="mt-6 h-full">
-        <View className="flex gap-[22]">
-          {prospectUser.workspace.map((user, index) => (
-            <Card
-              key={user}
-              label={user}
-              index={index}
-              isActive={user === form.workspace}
-              onSelect={(select) => {
-                actions.setBlockButton({ option: false });
-                events.set("workspace", select);
-              }}
-            />
-          ))}
-        </View>
-      </ScrollView>
-    </View>
+        <ScrollView className="mt-6 h-full">
+          <View className="flex gap-[22]">
+            {prospectUser.workspace.map((user, index) => (
+              <Card
+                key={user}
+                label={user}
+                index={index}
+                isActive={workspace === user}
+                onSelect={handleSelectWorkspace}
+              />
+            ))}
+          </View>
+        </ScrollView>
+      </View>
+      <Footer maxHeight={100}>
+        <Button
+          disabled={!isValid && !prospect.workspace}
+          onPress={() => {
+            if (!workspace) return;
+            handleUpdateProspect({
+              workspace,
+            });
+            navigate.go(PagesEnum.CREDENTIALS);
+          }}
+          label="GET STARTED"
+        />
+      </Footer>
+    </Fragment>
   );
 };

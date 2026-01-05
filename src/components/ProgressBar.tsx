@@ -22,9 +22,9 @@ export const ProgressBar = ({ step, steps }: Props) => {
   }, [step, steps]);
 
   return (
-    <View className="mb-6 h-2 w-52 bg-zinc-800 rounded-xl ">
+    <View className="mb-6 h-4 w-52 bg-zinc-800 rounded-xl ">
       <Animated.View
-        className={`h-2 rounded-xl ${colorsScheme.primary}`}
+        className={`h-4 rounded-xl ${colorsScheme.primary}`}
         style={{
           width: animatedWidth.interpolate({
             inputRange: [0, 100],

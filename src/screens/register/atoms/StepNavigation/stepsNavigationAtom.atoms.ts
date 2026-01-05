@@ -4,7 +4,7 @@ export enum PagesEnum {
   OCUPATION = "ocupation",
   WORKSPACE = "workspace",
   CREDENTIALS = "credentials",
-  FINISH_CREDENTIALS = "finishCredentials",
+  FINISH_CREDENTIALS = "finishRegister",
 }
 
 export interface NavigationState {
@@ -12,7 +12,7 @@ export interface NavigationState {
 }
 
 export const navigationHistoryAtom = atom<NavigationState[]>([
-  { page: PagesEnum.CREDENTIALS },
+  { page: PagesEnum.OCUPATION },
 ]);
 
 export const buttonStep = atom(false);
