@@ -31,9 +31,17 @@
           <string>com.lucasjuste.quizzo</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.379725403380-5lopqnh3ma5aomse9qik09402075rvdn</string>
+        </array>
+      </dict>
     </array>
     <key>CFBundleVersion</key>
     <string>1</string>
+    <key>GIDClientID</key>
+    <string>379725403380-5lopqnh3ma5aomse9qik09402075rvdn.apps.googleusercontent.com</string>
     <key>LSMinimumSystemVersion</key>
     <string>12.0</string>
     <key>LSRequiresIPhoneOS</key>

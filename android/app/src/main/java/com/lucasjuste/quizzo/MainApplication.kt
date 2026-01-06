@@ -1,4 +1,4 @@
-package com.anonymous.quizzo
+package com.lucasjuste.quizzo
 
 import android.app.Application
 import android.content.res.Configuration

@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.anonymous.quizzo'
+    namespace 'com.lucasjuste.quizzo'
     defaultConfig {
-        applicationId 'com.anonymous.quizzo'
+        applicationId 'com.lucasjuste.quizzo'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

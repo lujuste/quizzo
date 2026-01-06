@@ -1,4 +1,4 @@
-package com.anonymous.quizzo
+package com.lucasjuste.quizzo
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

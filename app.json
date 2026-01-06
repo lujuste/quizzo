@@ -12,22 +12,28 @@
         "expo-router",
         {
           "origin": "https://n"
-        },
+        }
+      ],
+      "expo-font",
+      [
         "@react-native-google-signin/google-signin",
         {
           "iosUrlScheme": "com.googleusercontent.apps.379725403380-5lopqnh3ma5aomse9qik09402075rvdn"
         }
-      ],
-      "expo-font"
+      ]
     ],
     "name": "quizzo",
     "slug": "quizzo",
     "android": {
-      "package": "com.anonymous.quizzo"
+      "package": "com.lucasjuste.quizzo"
     },
     "ios": {
-      "bundleIdentifier": "com.anonymous.quizzo",
-      "simulator": "true"
+      "bundleIdentifier": "com.lucasjuste.quizzo",
+      "simulator": "true",
+      "googleServicesFile": "./GoogleService-Info.plist",
+      "infoPlist": {
+        "GIDClientID": "379725403380-5lopqnh3ma5aomse9qik09402075rvdn.apps.googleusercontent.com"
+      }
     },
     "assetBundlePatterns": [
       "assets/fonts/*"
