@@ -30,7 +30,14 @@ export const FinishRegister = () => {
       </View>
 
       <View className="flex gap-6 mt-4">
-        <ButtonSocial width={16} height={16} socialMedia="google">
+        <ButtonSocial
+          onAuthenticated={(data) => {
+            console.log("RECEBI NO PAI:", data);
+          }}
+          width={16}
+          height={16}
+          socialMedia="google"
+        >
           Continue with Google
         </ButtonSocial>
 

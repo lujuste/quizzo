@@ -44,6 +44,8 @@ PODS:
     - ExpoModulesCore
     - GoogleSignIn (~> 9.0)
     - React-Core
+  - ExpoAppleAuthentication (8.0.8):
+    - ExpoModulesCore
   - ExpoAsset (11.1.5):
     - ExpoModulesCore
   - ExpoFileSystem (18.1.10):
@@ -2190,6 +2192,7 @@ DEPENDENCIES:
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - Expo (from `../node_modules/expo`)
   - "ExpoAdapterGoogleSignIn (from `../node_modules/@react-native-google-signin/google-signin/expo/ios`)"
+  - ExpoAppleAuthentication (from `../node_modules/expo-apple-authentication/ios`)
   - ExpoAsset (from `../node_modules/expo-asset/ios`)
   - ExpoFileSystem (from `../node_modules/expo-file-system/ios`)
   - ExpoFont (from `../node_modules/expo-font/ios`)
@@ -2303,6 +2306,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo"
   ExpoAdapterGoogleSignIn:
     :path: "../node_modules/@react-native-google-signin/google-signin/expo/ios"
+  ExpoAppleAuthentication:
+    :path: "../node_modules/expo-apple-authentication/ios"
   ExpoAsset:
     :path: "../node_modules/expo-asset/ios"
   ExpoFileSystem:
@@ -2487,6 +2492,7 @@ SPEC CHECKSUMS:
   EXConstants: 9f310f44bfedba09087042756802040e464323c0
   Expo: 4e8bda07d30b024b1732f87843a5349a3ecc1316
   ExpoAdapterGoogleSignIn: 21ff1daeef3d21cb0b45772d8029102cc728d6b1
+  ExpoAppleAuthentication: 9413ae9a5e631a424cc04c1b13b0694dbab7d594
   ExpoAsset: 3bc9adb7dbbf27ae82c18ca97eb988a3ae7e73b1
   ExpoFileSystem: c36eb8155eb2381c83dda7dc210e3eec332368b6
   ExpoFont: cf508bc2e6b70871e05386d71cab927c8524cc8e

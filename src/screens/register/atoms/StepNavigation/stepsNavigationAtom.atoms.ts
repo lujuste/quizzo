@@ -15,4 +15,8 @@ export const navigationHistoryAtom = atom<NavigationState[]>([
   { page: PagesEnum.OCUPATION },
 ]);
 
+export const INITIALSTATE_STEPS = 4;
+
+export const stepsHistoryAtom = atom(INITIALSTATE_STEPS);
+
 export const buttonStep = atom(false);

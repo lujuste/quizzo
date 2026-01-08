@@ -1,17 +1,19 @@
 import {
   buttonStep,
+  INITIALSTATE_STEPS,
   navigationHistoryAtom,
+  stepsHistoryAtom,
   type NavigationState,
   type PagesEnum,
 } from "@/screens/register/atoms/StepNavigation/stepsNavigationAtom.atoms";
 import { useAtom } from "jotai";
 
-const totalPages = 4;
-
 export const useNavigation = () => {
   const [navigationHistory, setNavigationHistory] = useAtom<NavigationState[]>(
     navigationHistoryAtom
   );
+
+  const [steps, setSteps] = useAtom(stepsHistoryAtom);
 
   const [disabledButton, setDisabledButton] = useAtom(buttonStep);
 
@@ -19,13 +21,14 @@ export const useNavigation = () => {
     setDisabledButton(option);
   };
 
-  const progressPercent = Math.round(
-    (navigationHistory.length / totalPages) * 100
-  );
-
+  let progressPercent = Math.round((navigationHistory.length / steps) * 100);
   const current = navigationHistory[navigationHistory.length - 1];
   const currentPage = current?.page;
   const currenNumberPage = navigationHistory.length;
+
+  function handleChangeSteps(steps: number | undefined = INITIALSTATE_STEPS) {
+    setSteps(steps);
+  }
 
   const go = (page: PagesEnum) => {
     if (current.page === page) return;
@@ -40,11 +43,16 @@ export const useNavigation = () => {
     });
   };
 
+  console.log(navigationHistory.length, progressPercent);
+
   return {
+    navigationHistory,
     currentPage,
     currenNumberPage,
     navigate: { go, back },
     progressPercent,
+    steps,
+    handleChangeSteps,
     actions: {
       disabledButton,
       setBlockButton,

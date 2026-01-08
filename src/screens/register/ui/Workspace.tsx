@@ -13,7 +13,7 @@ import { workspaceStepSchema } from "../form/registerSchema.form";
 import { SkippedRegister } from "../components/SkippedRegister";
 
 export const Workspace = () => {
-  const { navigate } = useNavigation();
+  const { navigate, handleChangeSteps } = useNavigation();
   const { handleUpdateProspect, prospect } = useRegister();
 
   const {
@@ -30,6 +30,10 @@ export const Workspace = () => {
     if (!prospect.workspace) return;
     setValue("workspace", prospect.workspace);
   }, [prospect.workspace]);
+
+  useEffect(() => {
+    handleChangeSteps();
+  }, []);
 
   return (
     <Fragment>

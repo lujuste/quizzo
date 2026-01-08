@@ -20,7 +20,8 @@
         {
           "iosUrlScheme": "com.googleusercontent.apps.379725403380-5lopqnh3ma5aomse9qik09402075rvdn"
         }
-      ]
+      ],
+      "expo-apple-authentication"
     ],
     "name": "quizzo",
     "slug": "quizzo",
@@ -29,6 +30,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.lucasjuste.quizzo",
+      "usesAppleSignIn": true,
       "simulator": "true",
       "googleServicesFile": "./GoogleService-Info.plist",
       "infoPlist": {

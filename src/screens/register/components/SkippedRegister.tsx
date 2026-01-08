@@ -8,7 +8,7 @@ type Props = {
 };
 
 export function SkippedRegister({ text, to = "finish" }: Props) {
-  const { navigate } = useNavigation();
+  const { navigate, handleChangeSteps, navigationHistory } = useNavigation();
 
   const paths = {
     finish: PagesEnum.FINISH_CREDENTIALS,
@@ -17,7 +17,9 @@ export function SkippedRegister({ text, to = "finish" }: Props) {
   return (
     <Text
       onPress={() => {
+        let steps = navigationHistory.length + 1;
         navigate.go(paths[to]);
+        handleChangeSteps(steps);
       }}
       className="text-md text-center font-bold text-white font-notosans leading-[1.8]"
     >

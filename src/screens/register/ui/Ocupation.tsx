@@ -6,7 +6,10 @@ import { useRegister } from "@/hooks/useRegister.hooks";
 import { Footer } from "@/screens/onboarding/components/Footer";
 import { Fragment, useEffect } from "react";
 import { ScrollView, Text, View } from "react-native";
-import { PagesEnum } from "../atoms/StepNavigation/stepsNavigationAtom.atoms";
+import {
+  INITIALSTATE_STEPS,
+  PagesEnum,
+} from "../atoms/StepNavigation/stepsNavigationAtom.atoms";
 import { prospectUser } from "../constants/onBoardingRegister.constants";
 import { ocupationStepSchema } from "../form/registerSchema.form";
 import { SkippedRegister } from "../components/SkippedRegister";
@@ -22,7 +25,7 @@ export const occupations = [
 ] as const;
 
 export const Ocupation = () => {
-  const { navigate } = useNavigation();
+  const { navigate, handleChangeSteps } = useNavigation();
   const { handleUpdateProspect, prospect } = useRegister();
 
   const {
@@ -39,6 +42,10 @@ export const Ocupation = () => {
     if (!prospect.ocupation) return;
     setValue("ocupation", prospect.ocupation);
   }, [prospect.ocupation]);
+
+  useEffect(() => {
+    handleChangeSteps();
+  }, []);
 
   return (
     <Fragment>

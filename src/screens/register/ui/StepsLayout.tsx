@@ -22,7 +22,7 @@ export const StepsLayout = ({
   children,
 }: Props) => {
   const [, setCurrentOption] = useAtom(currentOption);
-  const { currenNumberPage } = useNavigation();
+  const { currenNumberPage, steps } = useNavigation();
 
   return (
     <SafeAreaView className={`flex-1 ${colorsScheme.bg}`}>
@@ -36,7 +36,7 @@ export const StepsLayout = ({
           />
           <View className="flex-1 items-center justify-center mt-5">
             <ProgressBar
-              steps={5}
+              steps={steps}
               step={currenNumberPage}
               porcentage={progress}
             />
