@@ -56,8 +56,7 @@ export const ModalBottomSheet = () => {
                   />
                 ))}
               </Picker>
-              <View className="flex-row w-28 gap-3 items-end h-32">
-                <Button label="Cancel" variant="secondary" isSmall />
+              <View className="flex-row w-28 gap-3 justify-center items-end h-32">
                 <Button
                   onPress={() => {
                     if (dateRef.current) {
@@ -71,6 +70,7 @@ export const ModalBottomSheet = () => {
                   variant="primary"
                   isSmall
                 />
+                <Button label="Cancel" variant="secondary" isSmall />
               </View>
             </>
           ) : (

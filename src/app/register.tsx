@@ -39,7 +39,6 @@ export default function RegisterScreen() {
   return (
     <StepsLayout
       handleBack={handleBackPage}
-      handleGo={handleNextPage}
       progress={progressPercent}
     >
       <Component />

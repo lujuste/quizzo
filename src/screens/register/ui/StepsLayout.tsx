@@ -11,14 +11,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 type Props = {
   handleBack: VoidFunction;
-  handleGo: VoidFunction;
   progress: number;
+  isHiddenProgress?: boolean;
 } & PropsWithChildren;
 
 export const StepsLayout = ({
   handleBack,
-  handleGo,
   progress,
+  isHiddenProgress = false,
   children,
 }: Props) => {
   const [, setCurrentOption] = useAtom(currentOption);
@@ -27,20 +27,22 @@ export const StepsLayout = ({
   return (
     <SafeAreaView className={`flex-1 ${colorsScheme.bg}`}>
       <View className="flex-1 relative">
-        <View className="flex-row py-4 px-6 items-center justify-center">
+        <View className="flex-row py-4 px-6 items-center">
           <Back
             onPress={() => {
               setCurrentOption(null);
               handleBack();
             }}
           />
-          <View className="flex-1 items-center justify-center mt-5">
-            <ProgressBar
-              steps={steps}
-              step={currenNumberPage}
-              porcentage={progress}
-            />
-          </View>
+          {!isHiddenProgress && (
+            <View className="flex-1 items-center justify-center mt-5">
+              <ProgressBar
+                steps={steps}
+                step={currenNumberPage}
+                porcentage={progress}
+              />
+            </View>
+          )}
         </View>
 
         {children}

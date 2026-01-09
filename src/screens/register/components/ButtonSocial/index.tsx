@@ -39,11 +39,13 @@ export const ButtonSocial = ({
       if (isSuccessResponse(response)) {
         console.log({ userInfo: response.data });
       } else {
+        Alert.alert("Cancelado", "Falha no login com o Google.");
         // sign in was cancelled by user
       }
     } catch (error) {
       console.log(error, "deu erro!");
       if (isErrorWithCode(error)) {
+        Alert.alert("Error", "Falha no login com o Google.");
         switch (error.code) {
           case statusCodes.IN_PROGRESS:
             // operation (eg. sign in) already in progress
@@ -113,7 +115,7 @@ export const ButtonSocial = ({
         console.log("4. Usuário cancelou o login.");
       } else {
         console.error("5. Erro fatal no Apple Sign In:", e);
-        Alert.alert("Erro", "Falha no login com Apple.");
+        Alert.alert("Cancelado", "Falha no login com a Apple.");
       }
     }
   }

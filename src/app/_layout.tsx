@@ -1,12 +1,15 @@
 import "@/global.css";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { createStore, Provider } from "jotai";
 import { ActivityIndicator, View } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { LogBox } from "react-native";
+import { useEffect, useState } from "react";
+import { useAsyncStorage } from "@react-native-async-storage/async-storage";
+import { useOnboarding } from "@/hooks/useOnboarding.hooks";
 
 // Ignora todos os warnings visuais
 LogBox.ignoreAllLogs(true);
@@ -40,33 +43,40 @@ export default function RootLayout() {
   }
 
   return (
-    <Provider store={customStore}>
-      <GestureHandlerRootView>
-        <StatusBar style="light" />
-        <Stack>
-          <Stack.Screen
-            name="(protected)"
-            options={{
-              headerShown: false,
-            }}
-          />
-          <Stack.Screen name="login" />
+    <View className="flex-1  bg-zinc-950">
+      <Provider store={customStore}>
+        <GestureHandlerRootView>
+          <StatusBar style="light" />
+          <Stack>
+            <Stack.Screen
+              name="(protected)"
+              options={{
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              options={{
+                headerShown: false,
+              }}
+              name="login"
+            />
 
-          <Stack.Screen
-            name="onboarding"
-            options={{
-              headerShown: false,
-            }}
-          />
+            <Stack.Screen
+              name="onboarding"
+              options={{
+                headerShown: false,
+              }}
+            />
 
-          <Stack.Screen
-            name="register"
-            options={{
-              headerShown: false,
-            }}
-          />
-        </Stack>
-      </GestureHandlerRootView>
-    </Provider>
+            <Stack.Screen
+              name="register"
+              options={{
+                headerShown: false,
+              }}
+            />
+          </Stack>
+        </GestureHandlerRootView>
+      </Provider>
+    </View>
   );
 }

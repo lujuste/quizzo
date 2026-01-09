@@ -3,6 +3,8 @@ import { Divider } from "@/components/Divider";
 import { Input } from "@/components/Input";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { ButtonSocial } from "../components/ButtonSocial";
+import { Footer } from "@/screens/onboarding/components/Footer";
+import { Button } from "@/components/Button";
 
 export const FinishRegister = () => {
   return (
@@ -22,7 +24,12 @@ export const FinishRegister = () => {
         <Input placeholder="insert your secret pass" fieldText="Password" />
 
         <Checkbox />
+
+        <View>
+          <Button label="SIGN UP" />
+        </View>
       </View>
+
       <View className="flex-row items-center justify-center mt-8 gap-4">
         <Divider />
         <Text className="text-white font-notosansbold">or</Text>
