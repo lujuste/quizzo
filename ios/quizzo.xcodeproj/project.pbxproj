@@ -7,31 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		004FB869F1C1405D49BADF95 /* libPods-Quizzo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 256AB96A57C5731E143492A6 /* libPods-Quizzo.a */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
-		2AB4816A88BCC6369094086D /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E57EF76D6462E1B88605D452 /* PrivacyInfo.xcprivacy */; };
 		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
-		6D3CBE3895D0B5C264A5928C /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FE9C6407053401075E336C /* ExpoModulesProvider.swift */; };
-		702ACAE974BC068692F29C50 /* libPods-quizzo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B939ABAA5DE0075C7C61530 /* libPods-quizzo.a */; };
-		8789C12464D84BBABEA5322B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 854B40A3E70248F788A24B68 /* GoogleService-Info.plist */; };
+		59E53C119B4A9A923359ED6D /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237E358609252D5E82DEAD72 /* ExpoModulesProvider.swift */; };
 		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		D4A256E370F5975FA6874B9A /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 6DD63CA91F1486D1A3B2F2DC /* PrivacyInfo.xcprivacy */; };
+		E02867A178A349569620D65F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 90FEA1EAC7DA432D95353F0D /* GoogleService-Info.plist */; };
 		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0479755CBCB9B65BED539FB3 /* Pods-quizzo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzo.release.xcconfig"; path = "Target Support Files/Pods-quizzo/Pods-quizzo.release.xcconfig"; sourceTree = "<group>"; };
-		0B939ABAA5DE0075C7C61530 /* libPods-quizzo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-quizzo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		10AE8C0946F75EA4869045CD /* Pods-quizzo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quizzo.debug.xcconfig"; path = "Target Support Files/Pods-quizzo/Pods-quizzo.debug.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* quizzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quizzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = quizzo/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = quizzo/Info.plist; sourceTree = "<group>"; };
-		17FE9C6407053401075E336C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-quizzo/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
-		854B40A3E70248F788A24B68 /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "quizzo/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = quizzo/SplashScreen.storyboard; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* Quizzo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quizzo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Quizzo/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Quizzo/Info.plist; sourceTree = "<group>"; };
+		237E358609252D5E82DEAD72 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-Quizzo/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		256AB96A57C5731E143492A6 /* libPods-Quizzo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Quizzo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBBF17080077D0C532ACC16 /* Pods-Quizzo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzo.debug.xcconfig"; path = "Target Support Files/Pods-Quizzo/Pods-Quizzo.debug.xcconfig"; sourceTree = "<group>"; };
+		6DD63CA91F1486D1A3B2F2DC /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = Quizzo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		90FEA1EAC7DA432D95353F0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Quizzo/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9C35B3FB78AE76FDDC300AF6 /* Pods-Quizzo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Quizzo.release.xcconfig"; path = "Target Support Files/Pods-Quizzo/Pods-Quizzo.release.xcconfig"; sourceTree = "<group>"; };
+		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = Quizzo/SplashScreen.storyboard; sourceTree = "<group>"; };
 		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
-		E57EF76D6462E1B88605D452 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = quizzo/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = quizzo/AppDelegate.swift; sourceTree = "<group>"; };
-		F11748442D0722820044C1D9 /* quizzo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "quizzo-Bridging-Header.h"; path = "quizzo/quizzo-Bridging-Header.h"; sourceTree = "<group>"; };
+		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Quizzo/AppDelegate.swift; sourceTree = "<group>"; };
+		F11748442D0722820044C1D9 /* Quizzo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Quizzo-Bridging-Header.h"; path = "Quizzo/Quizzo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,52 +39,51 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				702ACAE974BC068692F29C50 /* libPods-quizzo.a in Frameworks */,
+				004FB869F1C1405D49BADF95 /* libPods-Quizzo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B07FAE1A68108700A75B9A /* quizzo */ = {
+		13B07FAE1A68108700A75B9A /* Quizzo */ = {
 			isa = PBXGroup;
 			children = (
 				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
-				F11748442D0722820044C1D9 /* quizzo-Bridging-Header.h */,
+				F11748442D0722820044C1D9 /* Quizzo-Bridging-Header.h */,
 				BB2F792B24A3F905000567C9 /* Supporting */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
-				854B40A3E70248F788A24B68 /* GoogleService-Info.plist */,
-				E57EF76D6462E1B88605D452 /* PrivacyInfo.xcprivacy */,
+				90FEA1EAC7DA432D95353F0D /* GoogleService-Info.plist */,
+				6DD63CA91F1486D1A3B2F2DC /* PrivacyInfo.xcprivacy */,
 			);
-			name = quizzo;
+			name = Quizzo;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				0B939ABAA5DE0075C7C61530 /* libPods-quizzo.a */,
+				256AB96A57C5731E143492A6 /* libPods-Quizzo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		64C0A3D8F6B65490849328CD /* ExpoModulesProviders */ = {
+		3AA7EAF1A5D51DF36CBF3B43 /* ExpoModulesProviders */ = {
 			isa = PBXGroup;
 			children = (
-				ED3B95AB42284DA4B5587576 /* quizzo */,
+				4C716BE687A084F06EE492D2 /* Quizzo */,
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
 		};
-		715576A6851BACBD1EADAD2C /* Pods */ = {
+		4C716BE687A084F06EE492D2 /* Quizzo */ = {
 			isa = PBXGroup;
 			children = (
-				10AE8C0946F75EA4869045CD /* Pods-quizzo.debug.xcconfig */,
-				0479755CBCB9B65BED539FB3 /* Pods-quizzo.release.xcconfig */,
+				237E358609252D5E82DEAD72 /* ExpoModulesProvider.swift */,
 			);
-			path = Pods;
+			name = Quizzo;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -97,12 +96,12 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* quizzo */,
+				13B07FAE1A68108700A75B9A /* Quizzo */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				715576A6851BACBD1EADAD2C /* Pods */,
-				64C0A3D8F6B65490849328CD /* ExpoModulesProviders */,
+				FCD468D68C6B997F072C6EC8 /* Pods */,
+				3AA7EAF1A5D51DF36CBF3B43 /* ExpoModulesProviders */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -112,7 +111,7 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* quizzo.app */,
+				13B07F961A680F5B00A75B9A /* Quizzo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,40 +122,42 @@
 				BB2F792C24A3F905000567C9 /* Expo.plist */,
 			);
 			name = Supporting;
-			path = quizzo/Supporting;
+			path = Quizzo/Supporting;
 			sourceTree = "<group>";
 		};
-		ED3B95AB42284DA4B5587576 /* quizzo */ = {
+		FCD468D68C6B997F072C6EC8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				17FE9C6407053401075E336C /* ExpoModulesProvider.swift */,
+				4EBBF17080077D0C532ACC16 /* Pods-Quizzo.debug.xcconfig */,
+				9C35B3FB78AE76FDDC300AF6 /* Pods-Quizzo.release.xcconfig */,
 			);
-			name = quizzo;
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		13B07F861A680F5B00A75B9A /* quizzo */ = {
+		13B07F861A680F5B00A75B9A /* Quizzo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "quizzo" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quizzo" */;
 			buildPhases = (
 				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
-				5E8F9276F25DD47FCB085D4D /* [Expo] Configure project */,
+				C33604B804118EAC94E5E90B /* [Expo] Configure project */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
-				AACE02485ED7B7825F6E690E /* [CP] Embed Pods Frameworks */,
+				95AC0DA62F7DDF05F3228D65 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = quizzo;
-			productName = quizzo;
-			productReference = 13B07F961A680F5B00A75B9A /* quizzo.app */;
+			name = Quizzo;
+			productName = Quizzo;
+			productReference = 13B07F961A680F5B00A75B9A /* Quizzo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -169,11 +170,12 @@
 				TargetAttributes = {
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1250;
+						DevelopmentTeam = "AC4GNKB6PN";
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "quizzo" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quizzo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -186,7 +188,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* quizzo */,
+				13B07F861A680F5B00A75B9A /* Quizzo */,
 			);
 		};
 /* End PBXProject section */
@@ -199,8 +201,8 @@
 				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
-				8789C12464D84BBABEA5322B /* GoogleService-Info.plist in Resources */,
-				2AB4816A88BCC6369094086D /* PrivacyInfo.xcprivacy in Resources */,
+				E02867A178A349569620D65F /* GoogleService-Info.plist in Resources */,
+				D4A256E370F5975FA6874B9A /* PrivacyInfo.xcprivacy in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,31 +239,12 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-quizzo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Quizzo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
-		};
-		5E8F9276F25DD47FCB085D4D /* [Expo] Configure project */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "[Expo] Configure project";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-quizzo/expo-configure-project.sh\"\n";
 		};
 		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -269,7 +252,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quizzo/Pods-quizzo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Quizzo/Pods-Quizzo-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/AppAuth/AppAuthCore_Privacy.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
 				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/ExpoConstants_privacy.bundle",
@@ -312,16 +295,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzo/Pods-quizzo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quizzo/Pods-Quizzo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AACE02485ED7B7825F6E690E /* [CP] Embed Pods Frameworks */ = {
+		95AC0DA62F7DDF05F3228D65 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-quizzo/Pods-quizzo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Quizzo/Pods-Quizzo-frameworks.sh",
 				"${PODS_XCFRAMEWORKS_BUILD_DIR}/hermes-engine/Pre-built/hermes.framework/hermes",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -330,8 +313,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-quizzo/Pods-quizzo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Quizzo/Pods-Quizzo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		C33604B804118EAC94E5E90B /* [Expo] Configure project */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "[Expo] Configure project";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script configures Expo modules and generates the modules provider file.\nbash -l -c \"./Pods/Target\\ Support\\ Files/Pods-Quizzo/expo-configure-project.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -341,7 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
-				6D3CBE3895D0B5C264A5928C /* ExpoModulesProvider.swift in Sources */,
+				59E53C119B4A9A923359ED6D /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,21 +352,18 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10AE8C0946F75EA4869045CD /* Pods-quizzo.debug.xcconfig */;
+			baseConfigurationReference = 4EBBF17080077D0C532ACC16 /* Pods-Quizzo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = quizzo/quizzo.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Quizzo/Quizzo.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AC4GNKB6PN;
 				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"FB_SONARKIT_ENABLED=1",
 				);
-				INFOPLIST_FILE = quizzo/Info.plist;
+				INFOPLIST_FILE = Quizzo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -378,27 +377,27 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasjuste.quizzo;
-				PRODUCT_NAME = quizzo;
-				SWIFT_OBJC_BRIDGING_HEADER = "quizzo/quizzo-Bridging-Header.h";
+				PRODUCT_NAME = Quizzo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzo/Quizzo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
+				DEVELOPMENT_TEAM = "AC4GNKB6PN";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0479755CBCB9B65BED539FB3 /* Pods-quizzo.release.xcconfig */;
+			baseConfigurationReference = 9C35B3FB78AE76FDDC300AF6 /* Pods-Quizzo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = quizzo/quizzo.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = Quizzo/Quizzo.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = AC4GNKB6PN;
-				INFOPLIST_FILE = quizzo/Info.plist;
+				INFOPLIST_FILE = Quizzo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -412,11 +411,14 @@
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasjuste.quizzo;
-				PRODUCT_NAME = quizzo;
-				SWIFT_OBJC_BRIDGING_HEADER = "quizzo/quizzo-Bridging-Header.h";
+				PRODUCT_NAME = Quizzo;
+				SWIFT_OBJC_BRIDGING_HEADER = "Quizzo/Quizzo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
+				DEVELOPMENT_TEAM = "AC4GNKB6PN";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 			};
 			name = Release;
 		};
@@ -547,7 +549,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "quizzo" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Quizzo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -556,7 +558,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "quizzo" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "Quizzo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

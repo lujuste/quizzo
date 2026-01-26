@@ -21,10 +21,24 @@
           "iosUrlScheme": "com.googleusercontent.apps.379725403380-5lopqnh3ma5aomse9qik09402075rvdn"
         }
       ],
-      "expo-apple-authentication"
+      "expo-apple-authentication",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#09090b",
+          "image": "./src/assets/icon-ios-20x20@3x.png",
+          "dark": {
+            "image": "./src/assets/icon-ios-20x20@3x.png",
+            "backgroundColor": "#09090b"
+          },
+          "imageWidth": 42
+        }
+      ]
     ],
-    "name": "quizzo",
+    "name": "Quizzo",
     "slug": "quizzo",
+    "icon": "./src/assets/icon-ios-20x20@3x.png",
+    "backgroundColor": "#09090b",
     "android": {
       "package": "com.lucasjuste.quizzo"
     },

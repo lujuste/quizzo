@@ -1,12 +1,37 @@
 import { Checkbox } from "@/components/Checkbox";
 import { Divider } from "@/components/Divider";
 import { Input } from "@/components/Input";
-import { ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  ActivityIndicator,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 import { ButtonSocial } from "../components/ButtonSocial";
-import { Footer } from "@/screens/onboarding/components/Footer";
 import { Button } from "@/components/Button";
+import { Controller, useForm } from "react-hook-form";
+import type { IRegisterZod } from "../form/registerSchema.form";
+import { useSignUp } from "../hooks/useSignUp.hooks";
+import { Loading } from "@/components/Loading";
 
 export const FinishRegister = () => {
+  const {
+    control,
+    handleSubmit,
+    formState: {},
+  } = useForm<IRegisterZod>({});
+
+  const { signUpMutations } = useSignUp();
+
+  let { mutate: signUpMutation, isPending } = signUpMutations.default;
+
+  function handleSignUp(data: IRegisterZod) {
+    signUpMutation(data);
+  }
+
+  if (isPending) return <Loading />;
+
   return (
     <ScrollView className="flex-1 gap-[16] px-6">
       <Text className="text-3xl mt-2 text-center font-bold text-white font-notosansbold leading-[1.8]">
@@ -17,16 +42,59 @@ export const FinishRegister = () => {
         it, then you have to do forgot password.
       </Text>
       <View className="flex gap-10 mt-4">
-        <Input fieldText="Username" placeholder="insert your username" />
+        <Controller
+          control={control}
+          rules={{
+            required: true,
+          }}
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              onChangeText={(text) => onChange(text.toLowerCase())}
+              fieldText="Username"
+              placeholder="insert your username"
+            />
+          )}
+          name="name"
+        />
 
-        <Input placeholder="insert your email" fieldText="Email" />
+        <Controller
+          control={control}
+          rules={{
+            required: true,
+          }}
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              onChangeText={(text) => onChange(text.toLowerCase())}
+              placeholder="insert your email"
+              fieldText="Email"
+            />
+          )}
+          name="email"
+        />
 
-        <Input placeholder="insert your secret pass" fieldText="Password" />
+        <Controller
+          control={control}
+          rules={{
+            required: true,
+          }}
+          render={({ field: { onChange, value } }) => (
+            <Input
+              value={value}
+              onChangeText={(text) => onChange(text.toLowerCase())}
+              secureTextEntry
+              placeholder="insert your secret pass"
+              fieldText="Password"
+            />
+          )}
+          name="password"
+        />
 
         <Checkbox />
 
         <View>
-          <Button label="SIGN UP" />
+          <Button onPress={handleSubmit(handleSignUp)} label="SIGN UP" />
         </View>
       </View>
 
@@ -55,21 +123,3 @@ export const FinishRegister = () => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 16,
-    marginVertical: 32,
-  },
-  section: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  paragraph: {
-    fontSize: 15,
-  },
-  checkbox: {
-    margin: 8,
-  },
-});

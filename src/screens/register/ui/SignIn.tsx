@@ -8,16 +8,36 @@ import { useNavigation } from "@/hooks/useNavigation";
 import { useRouter } from "expo-router";
 import { useAsyncStorage } from "@react-native-async-storage/async-storage";
 import { Button } from "@/components/Button";
+import { Controller, useForm } from "react-hook-form";
+import type { ISignInZod } from "../form/registerSchema.form";
+import { useSignIn } from "../hooks/useSignIn.hooks";
+import { Loading } from "@/components/Loading";
 
 export const SignIn = () => {
   const router = useRouter();
   const { progressPercent } = useNavigation();
   const { removeItem } = useAsyncStorage("@onboarding_key");
 
+  const {
+    control,
+    handleSubmit,
+    formState: {},
+  } = useForm<ISignInZod>({});
+
+  const { signInMutations } = useSignIn();
+
+  let { mutate: signInMutation, isPending } = signInMutations.default;
+
   const handleBackPage = async () => {
     await removeItem();
     router.replace("/onboarding");
   };
+
+  function handleSignIn(data: ISignInZod) {
+    signInMutation(data);
+  }
+
+  if (isPending) return <Loading />;
 
   return (
     <StepsLayout
@@ -34,12 +54,38 @@ export const SignIn = () => {
           forget it, then you have to do forgot password.
         </Text>
         <View className="flex gap-10 mt-4">
-          <Input
-            fieldText="Username or e-mail"
-            placeholder="insert your username or e-mail"
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                value={value}
+                onChangeText={(text) => onChange(text.toLowerCase())}
+                fieldText="Username"
+                placeholder="insert your username"
+              />
+            )}
+            name="email"
           />
 
-          <Input placeholder="insert your secret pass" fieldText="Password" />
+          <Controller
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Input
+                value={value}
+                onChangeText={(text) => onChange(text.toLowerCase())}
+                secureTextEntry
+                placeholder="insert your secret pass"
+                fieldText="Password"
+              />
+            )}
+            name="password"
+          />
 
           <Checkbox />
         </View>
@@ -67,8 +113,8 @@ export const SignIn = () => {
 
           <Button
             className="mt-6"
-            onPress={() => router.push("/register")}
-            label="GET STARTED"
+            onPress={handleSubmit(handleSignIn)}
+            label="SIGN IN"
           />
         </View>
 
@@ -86,21 +132,3 @@ export const SignIn = () => {
     </StepsLayout>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    marginHorizontal: 16,
-    marginVertical: 32,
-  },
-  section: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  paragraph: {
-    fontSize: 15,
-  },
-  checkbox: {
-    margin: 8,
-  },
-});
